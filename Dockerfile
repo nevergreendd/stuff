@@ -77,4 +77,3 @@ WORKDIR /data1
 
 ##########
 COPY run.py /run.py
-RUN python /run.py
