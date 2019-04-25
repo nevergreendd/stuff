@@ -76,4 +76,5 @@ VOLUME ["/data3"]
 WORKDIR /data1
 
 ##########
-#RUN python run.py
+COPY run.py /run.py
+RUN python /run.py
