@@ -21,8 +21,8 @@ def main(args):
     caabb[-1] = caabb[-1][:-1]   # remove ')'
 
     # step 2
-    tileNumber = args.number_of_processes
-    processNumber = args.number_of_tiles
+    tileNumber = args.number_of_tiles
+    processNumber = args.number_of_processes 
 
     cmd_2 = "mpc-tiling -i /data1/ -o /data2/ -t /data3/ -e \"" + caabb[0] + " " + caabb[1] + " " +  caabb[3] + " " + caabb[4] + "\"" + " -n " + str(tileNumber) + " -p " + str(processNumber)
  
@@ -40,7 +40,7 @@ def main(args):
     os.system(cmd_3)
 
     # step 4
-    cmd_4 = 'coeman-par-local -d / -c /data1/ParallelPotreeConverter.xml -e /data1/execution -n 4'
+    cmd_4 = 'coeman-par-local -d / -c /data1/ParallelPotreeConverter.xml -e /data2/result -n 4'
 
     os.system(cmd_4)
 
