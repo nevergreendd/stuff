@@ -48,7 +48,7 @@ def main(args):
 def parse_argument():
     parser = argparse.ArgumentParser()
     parser.add_argument("--number_of_processes", default=4, type=int) # default=nproc ??
-    parser.add_argument("--number_of_tiles", defulat=4, type=int)
+    parser.add_argument("--number_of_tiles", default=4, type=int)
 
     args = parser.parse_args(None)
     return args
